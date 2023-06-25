@@ -6,7 +6,7 @@
 - git clone git clone git@github.com:hemt1912/sydney.git
 
 # How to comit file on Github
-- step 1: git add .\FILE_NAME.abc (file have to stay in reponsitory)
+- step 1: git add .\FILE_NAME.abc (file has to stay in reponsitory)
 - step 2: git status
 - step 3: git commit -m "Add FILE_NAME file"
 - step 4: git status (once again)

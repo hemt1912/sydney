@@ -8,6 +8,6 @@
 # How to comit file on Github
 - step 1: git add .\FILE_NAME.abc (file has to stay in reponsitory)
 - step 2: git status
-- step 3: git commit -m "Add FILE_NAME file"
+- step 3: git commit -m "any think"
 - step 4: git status (once again)
 - step 5: git push origin master

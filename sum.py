@@ -3,3 +3,4 @@ def sum_1_to_n(n):
     for i in range(1, n+1):
         answer += i
     return(answer)
+    

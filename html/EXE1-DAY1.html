@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+
+    <body>
+        <h1>Monetary Formatter</h1>
+       <br>
+        <div>
+            <label for=" "> Amount </label>
+            <input type = "text" oninput="asignValue(this.value)    ">
+            Output <input id="output"> 
+            <br>
+            <p id="outputP"> </p>
+        </div>
+
+        <script>
+            function asignValue(value) {
+                document.getElementById("output").value = value;
+
+                document.getElementById('outputP').innerHTML = value;
+            }
+        </script>
+    </body>
+</html>

@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script>
+            let amount;
+            let month;
+            const interestRate = 0.05;
+
+            function readingInput(val, source) {
+                if (source === 'amount') amount = val;
+                if (source === 'month') month = val;
+
+                console.log(amount, month);
+
+                if (amount && month) 
+                    document.getElementById('outputP').innerHTML = parseInt(amount) * parseInt(month) * interestRate;
+            }
+        </script>
     </head>
 
     <body>
-        <h1>Monetary Formatter</h1>
-       <br>
         <div>
             <label for=" "> Amount </label>
-            <input type = "text" onkeyup="mult(this.value);">
-            <br><br>
-
-            Output <input type = "text", id = "output"> 
+            <input type = "text" id = "input amount", onchange="readingInput(this.value, 'amount')">
+            <label for=" "> Month</label>
+            <input type = "text" id = "input month", onchange="readingInput(this.value, 'month')">
+            <p id="outputP"> </p>
         </div>
-        <script>
-            function mult(value) {
-                var = 
-                const amt = document.getElementById("output").value = value
-            }
-        </script>
-        
     </body>
 </html>

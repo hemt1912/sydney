@@ -1,13 +1,11 @@
-import './App.css';
+import './App.scss';
 
 function App() {
   return (
     <div className="App">
       <label for="quantity">Amount :</label>
       <input type="number" name="Amount" />
-      
     </div>
-    
   );
 }
 

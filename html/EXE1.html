@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            table, th, td {
+              border:1px solid black;
+            }
+        </style>
+        <script>
+            let currentRow = 1
+            let fullName;
+            let gender;
+            let phoneNumber;
+
+            function setFullName(value) {
+                fullName = value;
+            }
+
+            function setGender(value){
+                gender = value;
+            }
+
+            function phonenumber(value){
+                phoneNumber = value;
+            }
+            function addButton(){
+                var row = document.getElementById('dataTable').insertRow(currentRow)
+                row.id = currentRow
+                cell1 = row.insertCell(0)
+                cell1.innerHTML = fullName      
+                cell2 = row.insertCell(1)
+                cell2.innerHTML = gender
+                cell3 = row.insertCell(2)
+                cell3.innerHTML = phoneNumber
+                cell4 = row.insertCell(3)
+                cell4.innerHTML = '<button onclick="removeRow(' + currentRow + ')">Remove</button>'
+                currentRow += 1
+            }   
+            
+            function removeRow(rowNumber){
+                console.log('....', rowNumber)
+                element = document.getElementById(rowNumber)
+                element.remove(rowNumber)
+                currentRow -= 1
+            }
+
+        </script>  
+    </head>
+
+    <body>
+        <div>   
+            <label for=" ">Fullname</label>
+            <input type = "text" id = "fullName", onchange="setFullName(this.value)">
+            <br>
+
+            <input type="radio" id="male" name="general" value="male" onclick="setGender(this.value)">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="general" value="female" onclick="setGender(this.value)">
+            <label for="male">Female</label>
+            
+            <br>
+            <label for=" ">Phone Number</label>
+            <input type = "text" id = "phoneNumber", onchange="phonenumber(this.value)">
+            <br>
+
+            <button onclick="addButton(this.value)">Add</button>
+            <br>
+
+            <table style="width:20%" id="dataTable">
+                <tr>
+                    <th>Name</th>
+                    <th>General</th>
+                    <th>Phone number</th>
+                    <td></td>
+                </tr>   
+            </table>
+        </div>
+    </body>
+</html>
